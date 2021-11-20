@@ -21,12 +21,7 @@
 | `AID` | `64` | 为进一步防止被探测所设额外 ID，即 AlterID，范围为 0 至 65535 |
 | `WSPATH` | `/` | WebSocket 所使用的 HTTP 协议路径 |
 
-## 接入 CloudFlare
 
-以下两种方式均可以将应用接入 CloudFlare，从而在一定程度上提升速度。
-
- 1. 为应用绑定域名，并将该域名接入 CloudFlare
- 2. 通过 CloudFlare Workers 反向代理
 
 ## 注意
 
