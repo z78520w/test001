@@ -19,26 +19,27 @@ cat << EOF > /usr/local/etc/xray/config.json
   "inbounds": [
     {
       "port": $PORT,
-      "protocol": "vless",
+      "protocol": "VLESS",
       "settings": {
         "clients": [
           {
-            "id": "uuid"
+            "id": "$UUID",
+            "alterId": 0
           }
-        ]
+        ],
+        "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-        "path": "/"
+          "path": "/"
         }
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom",
-      "settings": {}
+      "protocol": "freedom"
     }
   ]
 }
