@@ -30,7 +30,7 @@ cat << EOF > /usr/local/etc/xray/config.json
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-        "path": "/posts/wss_ray.html"
+        "path": "/"
         }
       }
     }
