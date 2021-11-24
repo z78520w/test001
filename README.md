@@ -17,7 +17,7 @@
 
 
 
-| `ID` | `ad806487-2d26-4636-98b6-ab85cc8521f7` | VMess 用户主 ID，用于身份验证，为 UUID 格式 |
+| `ID` | `18766d1a-cbd6-4b6f-db1d-38d78b3fb109` | VMess 用户主 ID，用于身份验证，为 UUID 格式 |
 
 
 
