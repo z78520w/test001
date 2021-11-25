@@ -9,7 +9,7 @@
         },
         "AID": {
             "description": "AlterID",
-            "value": "64"
+            "value": "12"
         },
         "WSPATH": {
             "description": "WebSocket Path",
