@@ -13,43 +13,31 @@ rm -rf /tmp/xray
 install -d /usr/local/etc/xray
 cat << EOF > /usr/local/etc/xray/config.json
 {
-    "inbounds": [
-        {
-            "port": 80,
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "uuid"
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "tcp",
-                "tcpSettings": {
-                    "header": {
-                        "type": "http",
-                        "response": {
-                            "version": "1.1",
-                            "status": "200",
-                            "reason": "OK",
-                            "headers": {
-                                "Content-Type": ["application/octet-stream", "video/mpeg"],
-                                "Transfer-Encoding": ["chunked"],
-                                "Connection": ["keep-alive"],
-                                "Pragma": "no-cache"
-                            }
-                        }
-                    }
-                }
-            }
+  "inbounds": [
+    {
+      "port": 443,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "uuid"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+        "path": "/posts/wss_ray.html"
         }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom"
-        }
-    ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
 }
 EOF
 
