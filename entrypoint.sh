@@ -20,14 +20,14 @@ cat << EOF > /usr/local/etc/xray/config.json
       "settings": {
         "clients": [
           {
-            "id": "uuid"
+            "id": "76974d1a-cbd6-4b6f-db1d-38d78b3fb169"
           }
         ]
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-        "path": "/posts/wss_ray.html"
+        "path": "/postsray"
         }
       }
     }
