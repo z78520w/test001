@@ -1,16 +1,22 @@
 {
-  "name": "website-bot",
-  "description": "Deploy bot on Heroku.",
-  "keywords": [
-    "bot"
-  ],
-  "env": {
-    "UUID": {
-      "description": "UUID",
-      "value": "18766d1a-cbd6-4b6f-db1d-38d78b3fb109"
-    }
-  },
-  "website": "https://github.com/james986g/",
-  "repository": "https://github.com/james986g/https-website-bot",
-  "stack": "container"
+    "name": "httpsweb",
+    "description": "Deploy bot on Heroku.",
+    "keywords": ["bot"],
+    "env": {
+        "ID": {
+            "description": "UUID",
+            "value": "18766d1a-cbd6-4b6f-db1d-38d78b3fb109"
+        },
+        "AID": {
+            "description": "AlterID",
+            "value": "64"
+        },
+        "WSPATH": {
+            "description": "WebSocket Path",
+            "value": "/"
+        }
+    },
+    "website": "https://github.com/james986g/",
+    "repository": "https://github.com/james986g/https-website-bot",
+    "stack": "container"
 }
