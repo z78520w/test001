@@ -1,8 +1,8 @@
 {
     "name": "https web",
     "description": "Deploy bot on Heroku.",
-    "keywords": ["bot"],
-    
+      "keywords": [
+    "web bot"
   ],
   "env": {
     "UUID": {
