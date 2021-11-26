@@ -6,7 +6,7 @@
   ],
   "env": {
     "UUID": {
-      "description": "VLESS UUID",
+      "description": "UUID",
       "value": "10974d1a-cbd6-4b6f-db1d-38d78b3fb109"
     }
   },
