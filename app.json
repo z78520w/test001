@@ -1,12 +1,11 @@
 {
-    "name": "httpsweb",
-    "description": "Deploy bot on Heroku.",
-    "keywords": [
-    "bot"
+    "name": "V2Ray",
+    "description": "Deploy V2ray on Heroku.",
+    "keywords": ["V2Ray"],
     "env": {
         "ID": {
             "description": "UUID",
-            "value": "18a28d40-fb08-942f-a920-01a34c1d608d"
+            "value": "ad806487-2d26-4636-98b6-ab85cc8521f7"
         },
         "AID": {
             "description": "AlterID",
@@ -17,7 +16,7 @@
             "value": "/"
         }
     },
-    "website": "https://github.com/james986g/",
-    "repository": "https://github.com/james986g/https-website-bot",
+    "website": "https://ibcl.us/Heroku-V2Ray_20191014/",
+    "repository": "https://github.com/bclswl0827/v2ray-heroku",
     "stack": "container"
 }
