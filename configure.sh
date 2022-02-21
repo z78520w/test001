@@ -13,37 +13,48 @@ rm -rf /tmp/xray
 install -d /usr/local/etc/xray
 cat << EOF > /usr/local/etc/xray/config.json
 {
-  "log": {
-    "loglevel": "none"
-  },
-  "inbounds": [
-    {
-      "port": $PORT,
-      "protocol": "VLESS",
-      "settings": {
-        "clients": [
-          {
-            "id": "10974d1a-cbd6-4b6f-db1d-38d78b3fb109",
-            "alterId": 0
-          }
-        ],
-        "decryption": "none"
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "wsSettings": {
-          "path": "/"
+    "log": {
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "port": 80,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "04e09d0b-aaf9-41c0-9e06-879f5838c748" // 填写你生成的UUID
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "tcpSettings": {
+                    "header": {
+                        "type": "http",
+                        "response": {
+                            "version": "1.1",
+                            "status": "200",
+                            "reason": "OK",
+                            "headers": {
+                                "Content-Type": ["application/octet-stream", "video/mpeg"],
+                                "Transfer-Encoding": ["chunked"],
+                                "Connection": ["keep-alive"],
+                                "Pragma": "no-cache"
+                            }
+                        }
+                    }
+                }
+            }
         }
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom"
-    }
-  ]
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
 }
-EOF
 
 # Run xray
 /usr/local/bin/xray -config /usr/local/etc/xray/config.json
