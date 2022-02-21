@@ -24,7 +24,7 @@ cat << EOF > /usr/local/etc/xray/config.json
             "settings": {
                 "clients": [
                     {
-                        "id": "04e09d0b-aaf9-41c0-9e06-879f5838c748" // 填写你生成的UUID
+                        "id": "73419d1a-cbd6-4b6f-db1d-38d78b3fb109"
                     }
                 ]
             },
